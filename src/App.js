@@ -262,9 +262,11 @@ const App = () => {
         {/*
          * waveボタンにwave関数を連動させる。
          */}
-        <button className="waveButton" onClick={wave}>
-          Wave at Me
-        </button>
+        {currentAccount && (
+          <button className="waveButton" onClick={wave}>
+            Wave at Me
+          </button>
+        )}
         {/* 履歴を表示する */}
         {currentAccount &&
           allWaves
